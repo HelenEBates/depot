@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Depot is a toy Ruby on Rails application built as a learning project using the book
+Agile Web Development with Rails 6.
 
-Things you may want to cover:
+Currently using all Rails defaults that come with a generated application:
 
-* Ruby version
+* Ruby 2.6.5
 
-* System dependencies
+* Uses a sqlite3 database
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To populate the products table run `bin/rails db:seed`
