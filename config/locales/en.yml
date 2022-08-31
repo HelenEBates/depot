@@ -30,4 +30,16 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      product:
+        title: "Title of book"
+        description: "Book description"
+    errors:
+      models:
+        product:
+          attributes:
+            description:
+              blank:  "is required, please add one"
+            title:
+              taken: "must be unique"
