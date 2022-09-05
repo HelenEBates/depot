@@ -28,6 +28,22 @@
      display: none;
    }
  }
+
+ .time_display {
+   display: flex;
+   margin: 0em;
+   padding: 0.5em;
+   background: #90EE90;
+ }
+
+ time {
+  font-weight: bold;
+  vertical-align: middle;
+  float: left;
+  padding-left: 1em;
+  margin: 0em;
+ }
+
  .content {
    margin: 0;
    padding: 0;
@@ -73,7 +89,7 @@
          }
        }
      }
-   } 
+   }
    main {
      padding: 0.5em
    }
