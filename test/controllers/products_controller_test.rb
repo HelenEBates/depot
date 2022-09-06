@@ -11,6 +11,37 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "#index displays the title for the products page" do
+    get products_url
+    assert_select 'h1', 'Products'
+  end
+
+  test "#index contains link to create a new product" do
+    get products_url
+    assert_select 'a', 'New Product'
+  end
+
+  test "#index displays links to show, edit and delete for a product" do
+    get products_url
+    assert_select 'td.actions ul' do |elements|
+      elements.each do |element|
+        assert_select element, 'li', 3
+      end
+    end
+  end
+
+  test "#index should display a table with an image, description and title for each product" do
+    get products_url
+    assert_select 'td img.list_image'
+    assert_select 'td.description', /Ruby is the fastest growing/
+    assert_select 'td.description h1', 'Programming Ruby 1.9'
+  end
+  
+  test "#index has a link to show the product which redirects the user to the show page" do
+    get products_url
+    assert_select 'td.actions ul li a', 'Show'
+  end
+
   test "should get new" do
     get new_product_url
     assert_response :success
