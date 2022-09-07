@@ -1,5 +1,9 @@
 .store {
   max-width: 80em;
+  p.visits {
+    text-align: right;
+    color: #b14e46;
+  }
   ul.catalog {
     border-top: solid 0.250em;
     list-style: none;

@@ -3,7 +3,7 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
-
+<p class="visits">You have made <%= @count %> <%= "visit".pluralize(@count) %> to the store</p>
 <ul class="catalog">
   <% cache @products do %>
     <% @products.each do |product| %>
