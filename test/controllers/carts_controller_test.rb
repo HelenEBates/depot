@@ -45,4 +45,19 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to carts_url
   end
+
+  test "When an invalid cart id is within the url an exception is handled" \
+        "users are redirected to the homepage" \
+        "and see a flash notice" do
+    @invalid_cart = Cart.new(id: "woo")
+
+    get cart_url(@invalid_cart)
+
+    assert_raises ActiveRecord::RecordNotFound do
+      raise ActiveRecord::RecordNotFound
+    end
+
+    assert_redirected_to '/'
+    assert_equal "Invalid cart", flash[:notice]
+  end
 end
