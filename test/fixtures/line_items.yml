@@ -3,7 +3,19 @@
 one:
   product: two
   cart: one
+  quantity: 1
 
 two:
   product: two
   cart: two
+  quantity: 1
+
+three:
+  product: rails
+  cart: one
+  quantity: 1
+
+four:
+  product: docker
+  cart: two
+  quantity: 2

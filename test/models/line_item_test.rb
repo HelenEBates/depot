@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class LineItemTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  fixtures :line_items
+  fixtures :products
+  test "total_price calculates the total price of the line_item" do
+    assert_equal 76.00, line_items(:four).total_price
+  end
 end
