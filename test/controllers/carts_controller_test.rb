@@ -57,7 +57,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
       raise ActiveRecord::RecordNotFound
     end
 
-    assert_redirected_to '/'
+    assert_redirected_to store_index_url
     assert_equal "Invalid cart", flash[:notice]
   end
 end
