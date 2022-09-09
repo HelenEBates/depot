@@ -11,7 +11,7 @@ two:
   quantity: 1
 
 three:
-  product: rails
+  product: ruby
   cart: one
   quantity: 1
 
