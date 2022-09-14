@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
+  fixtures :orders
   setup do
+    # orders fixture left in place for now
     @order = orders(:one)
   end
 
@@ -17,19 +19,26 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Your cart is empty'
   end
 
-  test "should get new" do
+  test "User with an item in their cart should get new" do
     post line_items_url, params: { product_id: products(:ruby).id }
 
     get new_order_url
     assert_response :success
   end
 
+  test "When the order cannot be saved the user is redirected to the catalog page" do
+    assert_no_difference 'Order.count' do
+      post orders_url, params: { order: { address: '', email: '', name: '', pay_type: '' } }
+    end
+  end
+
+
   test "should create order" do
     assert_difference('Order.count') do
       post orders_url, params: { order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type } }
     end
 
-    assert_redirected_to order_url(Order.last)
+    assert_redirected_to store_index_url
   end
 
   test "should show order" do
