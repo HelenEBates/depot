@@ -1,6 +1,6 @@
 import React from 'react'
 
-class PayTypeSelector extends React.component {
+class PayTypeSelector extends React.Component {
   render() {
     return (
       <div className="field">
