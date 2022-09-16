@@ -2,22 +2,28 @@ require "application_system_test_case"
 
 class ProductsTest < ApplicationSystemTestCase
   setup do
-    @product = products(:one)
+    @product = FactoryBot.create(:product)
   end
 
   test "visiting the index" do
     visit products_url
+
     assert_selector "h1", text: "Products"
   end
 
   test "creating a Product" do
-    visit products_url
-    click_on "New Product"
+    # There are two links to create a new product on the page, this tests the link at the top of the page
+    # as the user is more likley to use one they can see without scrolling.
+    @new_product = FactoryBot.build(:product)
 
-    fill_in "Description", with: @product.description
-    fill_in "Image url", with: @product.image_url
-    fill_in "Price", with: @product.price
-    fill_in "Title", with: @product.title
+    visit products_url
+    click_on "New Product", match: :first
+
+    fill_in "Title of book", with: @new_product.title
+    fill_in "Book description", with: @new_product.description
+    fill_in "Image url", with: @new_product.image_url
+    fill_in "Price", with: @new_product.price
+
     click_on "Create Product"
 
     assert_text "Product was successfully created"
@@ -28,10 +34,11 @@ class ProductsTest < ApplicationSystemTestCase
     visit products_url
     click_on "Edit", match: :first
 
-    fill_in "Description", with: @product.description
+    fill_in "Title of book", with: @product.title
+    fill_in "Book description", with: @product.description
     fill_in "Image url", with: @product.image_url
     fill_in "Price", with: @product.price
-    fill_in "Title", with: @product.title
+
     click_on "Update Product"
 
     assert_text "Product was successfully updated"
