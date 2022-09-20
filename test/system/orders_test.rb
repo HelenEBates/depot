@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class OrdersTest < ApplicationSystemTestCase
   setup do
-    @order = orders(:one)
+    @order = FactoryBot.build(:order)
   end
 
   test "visiting the index" do
