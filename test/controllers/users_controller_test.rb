@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = FactoryBot.build(:user)
+    @user = FactoryBot.create(:user)
   end
 
   test "should get index" do
@@ -16,6 +16,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
+    @user = FactoryBot.build(:user)
     assert_difference('User.count') do
       post users_url, params: { user: { name: @user.name, password: 'secret', password_confirmation: 'secret' } }
     end
@@ -34,7 +35,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    @user = FactoryBot.create(:user)
     patch user_url(@user), params: { user: { name: @user.name, password: 'secret', password_confirmation: 'secret' } }
     assert_redirected_to users_url
   end
