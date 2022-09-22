@@ -9,23 +9,19 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "User should be able to login and log out" do
-    # User can log in.
-    post login_url, params: { name: @user.name, password: 'secret' }
-
-    assert_equal @user.id, session[:user_id]
-    assert_redirected_to admin_url
-
-    # User can log out
+  test "User sees a flash notice when they log out" do
     delete logout_url
 
     assert_nil session[:user_id]
     assert_redirected_to store_index_url
+    assert_equal "Logged out", flash[:notice]
   end
 
-  test "Should fail login" do
+  test "User sees a flash notice when they have entered incorrect log in detail" \
+       "and is redirected to the log in pagd" do
     post login_url, params: { name: @user.name, password: 'wrong' }
 
     assert_redirected_to login_url
+    assert_equal "Invalid user/password combination", flash[:alert]
   end
 end
