@@ -45,5 +45,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to users_url
+    assert_equal "User #{@user.name} deleted.", flash[:notice]
   end
 end
