@@ -13,6 +13,8 @@ module Depot
 
     config.i18n.available_locales = [:'en-GB', :en, :es]
     config.i18n.default_locale = :'en-GB'
+
+    config.i18n.fallbacks = { en: :'en-GB' }
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}')]
 
     # Settings in config/environments/* take precedence over those specified here.
