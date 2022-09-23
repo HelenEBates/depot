@@ -1,0 +1,31 @@
+es:
+  activerecord:
+    attributes:
+      product:
+        title: "Title of book"
+        description: "Book description"
+    errors:
+      models:
+        product:
+          attributes:
+            description:
+              blank:  "is required, please add one"
+            title:
+              taken: "must be unique"
+  carts:
+    cart:
+      title: "Carrito de la Compra"
+      total: "Sumar"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
+  layouts:
+    application:
+      title: "Biblioteca de Pragmatic"
+      home: "Inicio"
+      questions: "Preguntas"
+      news: "Noticias"
+      contact: "Contacto"
+  store:
+    index:
+      title_html: "Su Cat&aacute;logo de Pragmatic"
+      add_html: "A&ntilde;adir al Carrito"
