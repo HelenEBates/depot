@@ -49,6 +49,14 @@ en-GB:
       total: "Total"
       empty: "Empty cart"
       checkout: "Checkout"
+  orders:
+    form:
+      name: "Name"
+      address_hmtl: "Address"
+      email: 'Email'
+      submit: "Place Order"
+    new:
+      legend: "Please Enter Your Details"
   layouts:
     application:
       title: "The Pragmatic Bookshelf"

@@ -18,6 +18,14 @@ es:
       total: "Sumar"
       empty: "Vaciar Carrito"
       checkout: "Comprar"
+  orders:
+    form:
+      name: "Nombre"
+      address_hmtl: "Dirección"
+      email: 'Correo electrónico'
+      submit: "Realizar pedido"
+    new:
+      legend: "Por favor ingrese sus datos"
   layouts:
     application:
       title: "Biblioteca de Pragmatic"
