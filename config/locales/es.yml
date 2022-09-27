@@ -4,6 +4,11 @@ es:
       product:
         title: "Title of book"
         description: "Book description"
+      order:
+        addres: "Direcci&oacute;n"
+        name: "Nombre"
+        email: "E-mail"
+        pay_type: "Forma de pago"
     errors:
       models:
         product:
@@ -12,6 +17,8 @@ es:
               blank:  "is required, please add one"
             title:
               taken: "must be unique"
+    models:
+      order: "pedido"
   carts:
     cart:
       title: "Carrito de la Compra"
