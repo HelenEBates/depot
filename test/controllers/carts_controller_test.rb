@@ -46,7 +46,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
       delete cart_url(@cart)
     end
 
-    assert_redirected_to store_index_url
+    assert_redirected_to store_index_url(locale: 'en-GB')
   end
 
   test "When an invalid cart id is within the url an exception is handled" \
