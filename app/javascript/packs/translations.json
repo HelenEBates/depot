@@ -145,7 +145,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007fcaa5936800 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007f83e56542d8 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       }
     },
     "layouts": {
@@ -227,6 +227,13 @@
         "address_hmtl": "Address",
         "email": "Email",
         "name": "Name",
+        "pay_promt_html": "Select a page type",
+        "pay_type": "Pay Type",
+        "pay_types": {
+          "check": "Check",
+          "credit_card": "Credit card - ppreferred",
+          "purchase_order": "Purchase Order"
+        },
         "submit": "Place Order"
       },
       "new": {
@@ -394,7 +401,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007fcaa5925528 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007f83e4f266f0 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       }
     },
     "number": {
@@ -625,7 +632,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007fcaa5954a80 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007f83e4f163e0 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       },
       "transliterate": {
         "rule": {
@@ -731,7 +738,13 @@
         "address_hmtl": "Dirección",
         "email": "Correo electrónico",
         "name": "Nombre",
+        "pay_promt_html": "Selectione un metodo de pago",
         "pay_type": "Forma de pago",
+        "pay_types": {
+          "check": "Cheque",
+          "credit_card": "Tarjeta de Credito",
+          "purchase_order": "Orden de Compra"
+        },
         "submit": "Realizar pedido"
       },
       "new": {

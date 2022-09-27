@@ -16,7 +16,8 @@ require("channels")
 
 // From installation instructions at https://github.com/fnando/i18n
 import { I18n } from "i18n-js";
-import translations from "./translations.json";
+// import translations from "../../../public/packs/translations.json";
+import translations from "./translations.json"; // seems to be the right place to generate files to
 // import translations from  "../../frontend/locales/translations.json"
 
 // First, you need to instantiate I18n with the translations' object, the main class of this library.

@@ -54,6 +54,12 @@ en-GB:
       name: "Name"
       address_hmtl: "Address"
       email: 'Email'
+      pay_type: "Pay Type"
+      pay_promt_html: "Select a page type"
+      pay_types:
+        check: "Check"
+        credit_card: "Credit card - ppreferred"
+        purchase_order: "Purchase Order"
       submit: "Place Order"
     new:
       legend: "Please Enter Your Details"

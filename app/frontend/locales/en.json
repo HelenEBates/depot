@@ -145,7 +145,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007ff6d3fb2e40 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007fc58a6f3248 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       }
     },
     "layouts": {
@@ -394,7 +394,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007ff6d680f0f0 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007fc58a6f1330 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       }
     },
     "number": {
@@ -625,7 +625,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00007ff6d680e2b8 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x00007fc58a6ebc00 /Users/helen/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       },
       "transliterate": {
         "rule": {
@@ -731,6 +731,7 @@
         "address_hmtl": "Dirección",
         "email": "Correo electrónico",
         "name": "Nombre",
+        "pay_type": "Forma de pago",
         "submit": "Realizar pedido"
       },
       "new": {
