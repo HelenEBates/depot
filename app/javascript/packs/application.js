@@ -8,10 +8,22 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+// From the book - make the I18n obect available
+// window.I18n = require("../../../public/javascripts/i18n")
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
+// translations are stored in the public directory, which has not been generated for us
+// require("../../../public/javascripts/translations")
+
+// From installation instructions at https://github.com/fnando/i18n
+import { I18n } from "i18n-js";
+import translations from "./translations.json";
+// import translations from  "../../frontend/locales/translations.json"
+
+// First, you need to instantiate I18n with the translations' object, the main class of this library.
+const i18n = new I18n(translations);
+
+// gives it access to the Window object
+window.I18n = i18n
+
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)

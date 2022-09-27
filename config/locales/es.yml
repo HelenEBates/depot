@@ -23,6 +23,7 @@ es:
       name: "Nombre"
       address_hmtl: "Dirección"
       email: 'Correo electrónico'
+      pay_type: "Forma de pago"
       submit: "Realizar pedido"
     new:
       legend: "Por favor ingrese sus datos"
