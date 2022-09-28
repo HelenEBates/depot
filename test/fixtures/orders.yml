@@ -1,8 +1,21 @@
 one:
-  name: MyString
+  name: Dave Thomas
   address: MyText
-  email: MyString
-  pay_type: 1
+  email: dave@example.com
+  pay_type: Check
+
+another_one:
+  name: Dave Thomas
+  address: 123 Any Street
+  email: dave@example.com
+  pay_type: Check
+  created_at: <%= 2.days.ago %>
+
+other_customer:
+  name: Chris Jones
+  address: 456 Somewhere Lane
+  email: chris@nowhere.net
+  pay_type: Check
 
 two:
   name: MyString
