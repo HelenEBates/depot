@@ -22,6 +22,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to users_url
+    assert_equal "User #{@user.name} was successfully created.", flash[:notice]
   end
 
   test "should show user" do
@@ -37,6 +38,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should update user" do
     patch user_url(@user), params: { user: { name: @user.name, password: 'secret', password_confirmation: 'secret' } }
     assert_redirected_to users_url
+    assert_equal "User #{@user.name} was successfully updated.", flash[:notice]
   end
 
   test "should destroy user" do
