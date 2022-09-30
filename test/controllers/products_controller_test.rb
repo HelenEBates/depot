@@ -53,6 +53,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to product_url(Product.last)
+    assert_equal "Product was successfully created.", flash[:notice]
   end
 
   test "should show product" do
@@ -68,6 +69,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should update product" do
     patch product_url(@product), params: { product: { description: @product.description, image_url: @product.image_url, price: @product.price, title: @title } }
     assert_redirected_to product_url(@product)
+    assert_equal "Product was successfully updated.", flash[:notice]
   end
 
   test "can't delete product in cart" do
@@ -81,6 +83,9 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "should destroy product" do
     assert_difference('Product.count', -1) do
       delete product_url(@product)
+
+      assert_redirected_to products_url
+      assert_equal "Product was successfully destroyed.", flash[:notice]
     end
 
     assert_redirected_to products_url
