@@ -46,6 +46,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to store_index_url(locale: 'en-GB')
+    assert_equal I18n.t('.thanks'), flash[:notice]
   end
 
   test "should show order" do
@@ -61,6 +62,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   test "should update order" do
     patch order_url(@order), params: { order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type } }
     assert_redirected_to order_url(@order)
+    assert_equal "Order was successfully updated.", flash[:notice]
   end
 
   test "should destroy order" do
@@ -69,5 +71,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to orders_url
+    assert_equal "Order was successfully destroyed.", flash[:notice]
   end
 end
