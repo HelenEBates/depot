@@ -11,15 +11,19 @@ class LineItemsTest < ApplicationSystemTestCase
   end
 
   test "creating a Line item" do
+    @product = products(:one)
+    @cart = carts(:one)
+
     visit line_items_url
+
     click_on "New Line Item"
 
-    fill_in "Cart", with: @line_item.cart_id
-    fill_in "Product", with: @line_item.product_id
+    fill_in "Product", with: @product.id
+    fill_in "Cart", with: @cart.id
+
     click_on "Create Line item"
 
-    assert_text "Line item was successfully created"
-    click_on "Back"
+    assert_text "Your Pragmatic Catalog"
   end
 
   test "updating a Line item" do
@@ -28,6 +32,7 @@ class LineItemsTest < ApplicationSystemTestCase
 
     fill_in "Cart", with: @line_item.cart_id
     fill_in "Product", with: @line_item.product_id
+
     click_on "Update Line item"
 
     assert_text "Line item was successfully updated"
