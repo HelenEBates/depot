@@ -3,6 +3,13 @@
 Depot is a toy Ruby on Rails application built as a learning project using the book
 Agile Web Development with Rails 6.
 
+There are lots of areas where improvement is needed, in particular the test coverage isn't good and I want to replace fixtures with
+FactoryBots.
+
+It would be nice to add more React
+
+Upgrading to Rails 7 would be nice so I could get rid of webpacker
+
 Currently using all Rails defaults that come with a generated application:
 
 * Ruby 2.6.5
