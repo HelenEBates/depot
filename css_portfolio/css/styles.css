@@ -1,0 +1,123 @@
+/* colour palette
+#06D6A0, 
+#1B9AAA, 
+#EF476F, 
+#FFC43D,
+#31332E - Black Olive 
+*/
+
+/* Global styles */
+/* font
+
+
+
+
+*/
+body {
+    background-color: f8ffe5;
+    color: #31332E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 200px;
+}
+/* Set font sizes for headings are much larger */
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 45px;
+}
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+.content-wrap {
+    width: 800px;
+    margin: 0 auto; /* set top margin to zero and left and right to auto to center the element in it's container */
+    padding: 60px;
+}
+a:link {
+    color: cadetblue;
+}
+a:visited {
+    color: blueviolet;
+}
+a:focus {
+    outline: 2px solid blueviolet;
+}
+a:hover {
+    color: chartreuse;
+}
+a:active {
+    font-weight: bold;
+}
+/* sections with dark backgrounds and light text */
+header, footer {
+    background-color: #31332E;
+    color: antiquewhite;
+    padding: 10px;
+}
+
+
+/* Profile */
+
+/* Projects */
+.projects {
+    background-color: #B13552;
+}
+.projects a {
+    background-color: #1ECBE1;
+    color: #E1341E;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+/* just target the link with two classes, not also using 'a' */
+.projects .btn {
+    background-color: #31332E;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.projects a:hover {
+    background-color: rgba(30,203,225,20);
+}
+
+/* Work Experience */
+.work-experience {
+    background-color: #49BDCC;
+}
+/* Education */
+.education {
+    background-color: #62E9C5;
+}
+/* Contact */
+.contact {
+    background-color: #FFC43D;
+}
+
+span {
+    height: 4em;
+    width: 4em;
+    background-color: antiquewhite;
+}
+aside {
+    background-color: rgb(255,0,0, 0.5);
+}
+#spaced {
+    text-align: center;
+}
+section h3 p {
+    font-weight: 800;
+}
+button:hover {
+    color: blue;
+  }
